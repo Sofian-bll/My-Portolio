@@ -4,34 +4,39 @@ title: Contact
 description: Contactez Sofian Bll
 ---
 
-<h1>Contact</h1>
+<section class="contact-grid">
 
-<p>Une question, un projet ? N'hésitez pas à me contacter.</p>
-
-<form class="contact-form" action="" method="POST">
-    <div class="form-group">
+  <div class="card contact-form-card">
+    <span class="card-label">✉️ Envoyer un message</span>
+    <form action="https://formspree.io/f/your-form-id" method="POST" style="margin-top: 20px; flex: 1; display: flex; flex-direction: column;">
+      <div class="form-group">
         <label for="name">Nom</label>
         <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="form-group">
+      </div>
+      <div class="form-group">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
+      </div>
+      <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" style="flex: 1; min-height: 120px;" required></textarea>
+      </div>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </div>
+
+  <div class="card contact-info">
+    <span class="card-label">📧 Email</span>
+    <div style="margin-top: auto;">
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     </div>
+  </div>
 
-    <button type="submit" class="btn">Envoyer</button>
-</form>
+  <div class="card contact-info">
+    <span class="card-label">🔗 Réseaux</span>
+    <div style="margin-top: auto;">
+      {% include social.html %}
+    </div>
+  </div>
 
-<div class="contact-links">
-    <p>Ou retrouvez-moi sur :</p>
-    <ul>
-        <li><a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-    </ul>
-</div>
+</section>

@@ -1,38 +1,76 @@
 ---
 layout: default
 title: Accueil
-description: Portfolio de Sofian Bll - Dev
+description: Portfolio de Sofian Bll - Développeur créatif & Motion Designer
 ---
 
-<section class="bento-grid">
+<section class="bento-grid home-grid">
 
-    <!-- Carte 1 : Hero -->
-    <div class="bento-card card-hero">
-        <h1>Sofian Bll</h1>
-        <p class="subtitle">Développeur créatif & Motion Designer</p>
+  <!-- Col 1: Hello + Photo -->
+  <div class="card card-hello">
+    <span class="card-label">👋 Hello</span>
+    <div class="card-bottom">
+      <h1>Sofian Bll</h1>
+      <p class="subtitle">Creative Developer</p>
     </div>
+  </div>
 
-    <!-- Carte 2 : Bio -->
-    <div class="bento-card card-bio">
-        <p>Étudiant à Web@cadémie by Epitech, passionné par le développement web et le design.</p>
+  <!-- Col 2: Software + Languages -->
+  <div class="card card-software">
+    <span class="card-label">🎨 Software</span>
+    <div class="icon-grid">
+      <img src="{{ '/assets/images/62c7b2b80cf7c36754c88de53699b421acd934be.svg' | relative_url }}" alt="After Effects">
+      <img src="{{ '/assets/images/bfbd4ac1518d9c9be535917ea7c6142cb9c65c3f.svg' | relative_url }}" alt="Illustrator">
+      <img src="{{ '/assets/images/dc81adbad2d739fc698d9f1ab8473c9b122b855b.svg' | relative_url }}" alt="Photoshop">
+      <img src="{{ '/assets/images/f5801f563046bf4352cc722c8d1ecad56f1d8f7b.svg' | relative_url }}" alt="Figma">
+      <img src="{{ '/assets/images/a6aeec405142be7afecb6889a3c8cdaae08a0dd5.svg' | relative_url }}" alt="Blender">
     </div>
+  </div>
 
-    <!-- Carte 3 : Projets -->
-    <a href="{{ '/projects' | relative_url }}" class="bento-card card-projects">
-        <h2>Projets</h2>
-        <p>Découvrir mes réalisations →</p>
-    </a>
-
-    <!-- Carte 4 : Skills -->
-    <div class="bento-card card-skills">
-        <h2>Skills</h2>
-        <p>HTML, CSS, JS, Figma, After Effects, FL Studio</p>
+  <!-- Col 3: Projets + About -->
+  <a href="{{ '/projects' | relative_url }}" class="card card-projects">
+    <span class="card-label">🚀 Projets</span>
+    <div class="card-bottom">
+      <h2>Mes réalisations</h2>
+      <span class="link-arrow">Voir →</span>
     </div>
+  </a>
 
-    <!-- Carte 5 : Contact -->
-    <a href="{{ '/contact' | relative_url }}" class="bento-card card-contact">
-        <h2>Contact</h2>
-        <p>Me contacter →</p>
-    </a>
+  <!-- Col 4: Photo (tall) -->
+  <div class="card card-photo">
+    <img src="{{ '/assets/images/0851536a8928cc126f7a9033de7b606054830a82.png' | relative_url }}" alt="Sofian Bll">
+  </div>
+
+  <!-- Row 2 -->
+  <div class="card card-languages">
+    <span class="card-label">💻 Languages</span>
+    <div class="icon-grid">
+      <img src="{{ '/assets/images/668d5906b37069b1f74e768add5b86927e119492.svg' | relative_url }}" alt="HTML">
+      <img src="{{ '/assets/images/9da63ba0bcbf35fb79e46a51c042e41980d66b29.svg' | relative_url }}" alt="CSS">
+      <img src="{{ '/assets/images/126f6d413d2831c98da7a188057e046d006795d8.svg' | relative_url }}" alt="JavaScript">
+      <img src="{{ '/assets/images/55c903291e83cdfbacc68d652f0147c1132c25a5.svg' | relative_url }}" alt="PHP">
+      <img src="{{ '/assets/images/8153b1d8e7bfd658b6db72089fce1c2d16b4ff0d.svg' | relative_url }}" alt="Python">
+      <img src="{{ '/assets/images/7e318776ae2dae2e44a16a8593641303efa9c00c.svg' | relative_url }}" alt="Git">
+    </div>
+  </div>
+
+  <a href="{{ '/contact' | relative_url }}" class="card card-contact">
+    <span class="card-label">✉️ Contact</span>
+    <div class="card-bottom">
+      <h2>Me contacter</h2>
+      <span class="link-arrow">Envoyer →</span>
+    </div>
+  </a>
+
+  <div class="card card-about">
+    <span class="card-label">👤 About</span>
+    <p>Étudiant à Web@cadémie by Epitech, passionné par le développement web et le design.</p>
+  </div>
+
+  <!-- Row 3: Social -->
+  <div class="card card-social">
+    <span class="card-label">🔗 Social</span>
+    {% include social.html %}
+  </div>
 
 </section>
