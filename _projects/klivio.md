@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Klivio [HTML & CSS Only]
 date: 2025-12-15
 description: Website made for an Epitech's school project.
